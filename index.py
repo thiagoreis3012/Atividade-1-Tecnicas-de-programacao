@@ -1,78 +1,45 @@
 import random
-contador = 1
-#inicio caminho vermelho ou preto
-print("Você esta na sala: 1")
-print("Escolha seu caminho: ")
+
+portal = random.randint(1,5)
+caminho_vermelho = 1
+caminho_preto = 2
+sala = 1
+
+
+print("Você esta no Inicio")
+print("Escolha seu caminho:")
 print("[1] caminho vermelho")
 print("[2] caminho preto")
-sala1 = int(input()) 
+caminho = int(input())
 
-while (contador <= 9):
-#sala 2 caminho vermelho
- if(sala1 == 1 ):
-  CV = 1 + 1
-  print("você esta na sala : {}".format(CV + contador))
-  print("Escolha seu caminho: ")
-  print("[1] caminho vermelho")
-  print("[2] caminho preto")
-  sala2 = int(input()) 
-
-#sala 1 caminho preto
- elif(sala1 == 2):
-  CP = 1 + 2
-  print("você esta na sala : {}".format(CP +))
-  print("Escolha seu caminho: ")
-  print("[1] caminho vermelho")
-  print("[2] caminho preto")
-  sala3 = int(input())
-
-#sala 3 caminho preto
-if (sala3 == 2):
-  CP = 3 + 2
-  print("você esta na sala : {}".format(CP))
-  print("Escolha seu caminho: ")
-  print("[1] caminho vermelho")
-  print("[2] caminho preto")
-  sala5 = int(input()) 
-
-#sala 5 caminho preto
-elif (sala5 == 2):
-  CP = 5 + 2
-  print("você esta na sala : {}".format(CP))
-  print("Escolha seu caminho: ")
-  print("[1] caminho vermelho")
-  print("[2] caminho preto")
-  sala7 = int(input()) 
-
-# Vitoria
-if (sala7 == 1):
-  CV = 7 + 1
-  print("vc esta na sala : 8")
+while (sala <= 7):
 
 
-# caminho preto
-if(sala2 == 2 ):
-  CP = 2 + 2
-  print("você esta na sala : {}".format(CP))
-  print("Escolha seu caminho: ")
-  print("[1] caminho vermelho")
-  print("[2] caminho preto")
-  sala4 = int(input()) 
+  if (caminho == 1):
+   print("Você esta na sala: {}".format(sala + caminho_vermelho))
+   print("Escolha seu caminho :")
+   print("[1] caminho vermelho")
+   print("[2] caminho preto")
+   sala = sala + caminho_vermelho
+   caminho = int(input())
 
-# caminho preto
-if(sala4 == 2 ):
-  CP = 4 + 2
-  print("você esta na sala : {}".format(CP))
-  print("Escolha seu caminho: ")
-  print("[1] caminho vermelho")
-  print("[2] caminho preto")
-  sala6 = int(input()) 
+ 
+  elif(caminho == 2):
+   print("Você esta na sala: {}".format(sala + caminho_preto))
+   print("Escolha seu caminho :")
+   print("[1] caminho vermelho")
+   print("[2] caminho preto")
+caminho = int(input())
+sala = sala + caminho_preto
 
-if(sala6 == 2 ):
-  CP = 6 + 2
-  print("você esta na sala : {}".format(CP))
-  print("Escolha seu caminho: ")
-  print("[1] caminho vermelho")
-  print("[2] caminho preto")
-  sala8 = random.randint(1,5)
-  print("você esta na sala :{} entrará no portal e voltará para a sala: {}".format(CP,sala8))
+def count (caminho):
+
+
+ print("caminhoresultado : {}".format(caminho))
+
+if (sala + caminho_vermelho == 8 or sala + caminho_preto == 8 ):
+    print("Você esta na sala : 8 / Portal te mandará para a sala :{}".format(portal))
+
+elif (sala + caminho_vermelho == 9 or sala + caminho_preto == 9):
+    print("Você esta na sala : 9")
+    print("VENCEU !!!!!!")
