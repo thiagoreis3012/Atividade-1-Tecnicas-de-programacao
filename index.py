@@ -35,7 +35,7 @@ while sala + caminho <= 8 and cont <= 7:
         sala = sala + caminho_preto
         caminho = int(input())
         cont += 1
-
+sala += caminho
 
 if (sala >= 9):
     print("Você esta na sala : 9")
