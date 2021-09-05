@@ -1,44 +1,40 @@
-import random
+from random import randint
 
-portal = random.randint(1, 5)
-caminho_vermelho = 1
-caminho_preto = 2
+resultados = {
+    "1": "Você não chegou na sala 9\nGAME OVER!!",
+    "2": "Você não chegou na sala 9\nGAME OVER!!",
+    "3": "Você não chegou na sala 9\nGAME OVER!!",
+    "4": "Você não chegou na sala 9\nGAME OVER!!",
+    "5": "Você não chegou na sala 9\nGAME OVER!!",
+    "6": "Você não chegou na sala 9\nGAME OVER!!",
+    "7": "Você não chegou na sala 9\nGAME OVER!!",
+    "8": "Você não chegou na sala 9\nGAME OVER!!",
+    "9": "Você chegou na sala 9\nYOU WIN!!"
+}
+
+CAMINHO_VERMELHO = 1
+CAMINHO_PRETO = 2
 sala = 1
-cont = 1
+jogadas = 0
 
-caminho = int(input("""Você está no início!
+while sala < 9 and jogadas < 7:
+    portal = randint(1, 5)
+    caminho = int(input(f"""Você está na sala {sala}.
 Escolha seu caminho:
 [ 1 ] caminho vermelho
 [ 2 ] caminho preto\n"""))
-
-while sala + caminho <= 8 and cont <= 7:
-
-    if caminho == 2 and sala == 4 or caminho == 1 and sala == 5:
-        print("Você esta na sala : 6  \nVocê será redirecionado para a sala 8")
+    if sala == 8 and caminho == 2: 
         sala = portal
-        print(f"O portal te jogara para a sala {portal}")
-        cont += 1
-        sala -= caminho
-    elif (caminho == 1):
-        print("Você esta na sala: {}".format(sala + caminho_vermelho))
-        print("Escolha seu caminho: ")
-        print("[1] caminho vermelho")
-        print("[2] caminho preto")
-        sala = sala + caminho_vermelho
-        caminho = int(input())
-        cont += 1
+        print(f"O portal te jogará para a sala: {sala}")
+        jogadas += 1
+    elif sala + caminho == 6:
+        sala += caminho
+        print("""Você chegou na sala 6, aqui você só tem um único caminho a seguir que te levará para a sala 8""")
+        sala += CAMINHO_PRETO
+        jogadas += 1
     else:
-        print("Você esta na sala: {}".format(sala + caminho_preto))
-        print("Escolha seu caminho: ")
-        print("[1] caminho vermelho")
-        print("[2] caminho preto")
-        sala = sala + caminho_preto
-        caminho = int(input())
-        cont += 1
-sala += caminho
+        sala += caminho
+        jogadas += 1
 
-if (sala >= 9):
-    print("Você esta na sala : 9")
-    print("VENCEU !!!!!!")
-else:
-    print("Você não chegou na sala 9 \nGAME OVER!!")
+resultadoFinal = resultados[str(sala)]
+print(resultadoFinal)
