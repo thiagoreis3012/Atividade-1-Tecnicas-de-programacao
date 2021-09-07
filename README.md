@@ -22,9 +22,9 @@
     <li>Não é permitido usar o comando <b>switch-case</b>.</li>
 </ul>
 <h3>Tecnologias utilizadas</h3>
-![Python](https://img.shields.io/badge/python-%2314354C.svg?style=flat&logo=python)
-![Git](https://img.shields.io/badge/-Git-222222?style=flat&logo=git&logoColor=F05032)
-![GitHub](https://img.shields.io/badge/-GitHub-222222?style=flat&logo=github&logoColor=181717)
+<img src="https://img.shields.io/badge/python-%2314354C.svg?style=flat&logo=python">
+<img src="https://img.shields.io/badge/-Git-222222?style=flat&logo=git&logoColor=F05032">
+<img src="https://img.shields.io/badge/-GitHub-222222?style=flat&logo=github&logoColor=181717">
 <h3>Integrantes:</h3>
 <ul>
     <li><a href="https://github.com/RobertoLocatelli02" target="_blank">Roberto Locatelli</a> | RA: 21636776</li>
