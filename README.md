@@ -29,6 +29,6 @@
 <ul>
     <li><a href="https://github.com/RobertoLocatelli02" target="_blank">Roberto Locatelli</a> | RA: 21636776</li>
     <li><a href="https://github.com/italoztrader" target="_blank">Italo Roberto</a> | RA:</li>
-    <li><a href="https://github.com/thiagoreis3012" target="_blank">Thiago Reis</a> | RA:</li>
+    <li><a href="https://github.com/thiagoreis3012" target="_blank">Thiago Reis</a> | RA: 21650547</li>
     <li><a href="https://github.com/DanielVilela21" target="_blank">Daniel Vilela</a> | RA: 20995556</li>
 </ul>
